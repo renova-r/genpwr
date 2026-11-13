@@ -123,7 +123,7 @@ ll_zero_finder2 <- function(af, ii = 6, lower = 0, upper = 1, qdelta = 27){
 			if(length(xl0) > 0){
 				# our "window" is defined by the x values for which the absolute value of the y-values is close the the minimum absolute y value
 				# iwin <- which(abs(yl0) < qdelta * mdelta)
-				if(!class(yl0) == "list") yl00 <- list(yl0)
+				if(!inherits(yl0, "list")) yl00 <- list(yl0)
 				mxrange0 <- list()
 				no_x_axis_cross <- rep(F, length(yl00))
 				for(yl0ii in 1:length(yl00)){
